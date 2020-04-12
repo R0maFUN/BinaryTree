@@ -9,8 +9,6 @@ typedef struct tree_t {
 }TREE;
 
 TREE* AddElement(TREE* root, string_r val);
-int FindLastOpId(string_r* operators, int size);
-void CreateBracketsTree(TREE* root, string_r* operands, string_r* operators, int* operandsSize, int* operatorsSize);
 TREE* CreateTree(string_r expression);
 void PrintTree(TREE* root, int level);
 double Calculate(TREE* root);

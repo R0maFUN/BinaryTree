@@ -173,12 +173,6 @@ bool isOperator(string_r str)
 	return false;
 }
 
-bool isBracket(string_r str)
-{
-	if (str[0] == '(' || str[0] == ')')
-		return true;
-	return false;
-}
 
 string_r* SortStation(string_r* parsed)
 {
@@ -232,8 +226,7 @@ string_r* SortStation(string_r* parsed)
 
 	int resultSize = 40;
 	char** result = (char**)malloc(sizeof(char*) * resultSize);
-	//for (int i = 0; i < resultSize; ++i)
-		//result[i] = (char*)malloc(sizeof(char) * 20);
+
 	i = 0;
 	while (outputQ)
 	{

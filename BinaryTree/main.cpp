@@ -12,14 +12,13 @@ int main()
 
 	
 	string_r* parsed = Parsestring_r(exp);
-	puts("result:");
+	puts("result of parsing:");
 	for (int i = 0; parsed[i] != NULL; ++i)
 		printf("%s ", parsed[i]);
 
-	//TREE* root = CreateTree(exp);
-	//PrintTree(root, 0);
+
 	string_r * newP = SortStation(parsed);
-	puts("result:");
+	puts("result of sort satation:");
 	for (int i = 0; newP[i] != NULL; ++i)
 		printf("%s ", newP[i]);
 	
