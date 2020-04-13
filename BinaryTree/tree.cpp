@@ -106,28 +106,12 @@ double Calculate(TREE* root)
 	if (isNum(root->value))
 		return StrToInt(root->value);
 	if (root->value[0] == '+')
-	{
-		int left = Calculate(root->left);
-		int right = Calculate(root->right);
 		return Calculate(root->left) + Calculate(root->right);
-	}
 	else if (root->value[0] == '-')
-	{
-		int left = Calculate(root->left);
-		int right = Calculate(root->right);
 		return Calculate(root->left) - Calculate(root->right);
-	}
 	else if (root->value[0] == '*')
-	{
-		int left = Calculate(root->left);
-		int right = Calculate(root->right);
 		return Calculate(root->left) * Calculate(root->right);
-	}
 	else if (root->value[0] == '/' || root->value[0] == '//')
-	{
-		int left = Calculate(root->left);
-		int right = Calculate(root->right);
 		return (double)Calculate(root->left) / Calculate(root->right);
-	}
 }
 
